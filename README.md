@@ -72,16 +72,6 @@ Final year of B.Tech Data Science at **NMIMS**. Currently deep in time-series fo
 
 ---
 
-## `05` &nbsp;·&nbsp; the numbers
-
-<div align="center">
-
-![Stats](https://github-readme-stats.vercel.app/api?username=siddh-sh&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0B1017&title_color=5EEAD4&icon_color=2DD4BF&text_color=8B98A5&ring_color=FBBF24)
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=siddh-sh&layout=compact&langs_count=8&hide_border=true&bg_color=0B1017&title_color=5EEAD4&text_color=8B98A5)
-
-</div>
-
----
 
 <div align="center">
 
@@ -92,6 +82,15 @@ Final year of B.Tech Data Science at **NMIMS**. Currently deep in time-series fo
 </div>
 
 <!--
+  STATS CARDS: removed. github-readme-stats.vercel.app (the free shared instance)
+  was timing out, so the cards rendered as broken images. To bring them back,
+  deploy your own instance of github-readme-stats to Vercel (5 min, free) and
+  swap the hostname, then re-add:
+
+  ## `05`  ·  the numbers
+  ![Stats](https://YOUR-INSTANCE.vercel.app/api?username=siddh-sh&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0B1017&title_color=5EEAD4&icon_color=2DD4BF&text_color=8B98A5&ring_color=FBBF24)
+  ![Top languages](https://YOUR-INSTANCE.vercel.app/api/top-langs/?username=siddh-sh&layout=compact&langs_count=8&hide_border=true&bg_color=0B1017&title_color=5EEAD4&text_color=8B98A5)
+
   TO ADD YOUR LINKEDIN: paste this next to each Email badge, with your slug swapped in.
 
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0B1017?style=for-the-badge&logo=linkedin&logoColor=5EEAD4&labelColor=0B1017)](https://linkedin.com/in/YOUR-SLUG)
