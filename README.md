@@ -1,97 +1,66 @@
-<div align="center">
-
 <img src="https://raw.githubusercontent.com/siddh-sh/siddh-sh/main/banner.svg" alt="Siddh Shah — Data Science · Applied ML" width="100%" />
 
-<br/>
+Final-year B.Tech Data Science at NMIMS. I build ML for markets and logistics — domains where a wrong answer costs somebody money, which makes it harder to avoid the question of whether the model is actually right.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0B1017?style=for-the-badge&logo=linkedin&logoColor=5EEAD4&labelColor=0B1017)](https://linkedin.com/in/siddh-shah11)
-[![Email](https://img.shields.io/badge/siddhshah47929@gmail.com-0B1017?style=for-the-badge&logo=gmail&logoColor=5EEAD4&labelColor=0B1017)](mailto:siddhshah47929@gmail.com)
+Most student ML projects are a model fitted to a clean CSV someone else labelled. Mine are organised around the part before that: deciding what "correct" means, and getting the label from something real rather than something convenient.
 
-</div>
-
----
-
-## `01` &nbsp;·&nbsp; hey, i'm siddh
-
-I build machine learning systems for domains where being wrong is expensive — markets and supply chains.
-
-What I've come to care about is the unglamorous half of the work. Anyone can fit a model on a clean CSV. The interesting problems start after: where does the label actually come from, does the validation split lie to you, and can someone who isn't you run this thing and get an answer they'd act on. That's the part I keep choosing.
-
-So my projects tend to look the same shape from a distance — collect the data myself, label it against something real, train something honest, then put an API or a dashboard in front of it. A model that nobody can query is a notebook, not a system.
-
-Final year of B.Tech Data Science at **NMIMS**. Currently deep in time-series forecasting and financial NLP.
+<img src="https://raw.githubusercontent.com/siddh-sh/siddh-sh/main/pipeline.svg" alt="Four projects, one shape: collect, establish ground truth, model, serve" width="100%" />
 
 ---
 
-## `02` &nbsp;·&nbsp; what i've built
+### FreightIQ
 
-| | Project | What it does | My part |
-|---|---|---|---|
-| 🚚 | **[FreightIQ](https://github.com/siddh-sh/LoRRI)** | Freight procurement that explains itself. XGBoost predicts carrier delay risk, PuLP allocates volume across carriers under cost and capacity constraints, and an LLM turns the resulting optimization into plain-English justification. Scrapes live news to penalize routes hit by weather or strikes. | Top contributor — 32 of 69 commits. ML engine, scoring, market-intel agent, Flask app, map UI, deployment. |
-| 📈 | **[SentimentIQ](https://github.com/siddh-sh/Financial-sentiment)** | Bullish/bearish classifier for financial headlines. The labels aren't from a sentiment lexicon — each of 353 articles is labelled by what the stock's next-day close *actually did*. TF-IDF + linear SVM behind a FastAPI service with a charting frontend. | Solo. Whole pipeline: collection, labelling, training, API, frontend. |
-| 🎓 | **[EdWise](https://github.com/siddh-sh/SIH_BitWise)** | Academic suite for Smart India Hackathon — QR attendance, adaptive quizzing, AI curriculum planning. | Built the resource recommendation module: FastAPI controllers and routes, difficulty-tiered catalogue across 8 subject tracks, Jinja2 views and frontend. |
-| ⚖️ | **[Pairs Trading Dashboard](https://github.com/siddh-sh/ATSA-Project)** | Statistical arbitrage on KO/PEP. ADF and Engle-Granger tests establish cointegration, then ARIMA, LSTM and Random Forest each forecast the spread so their signals can be compared. | Wrote the inference layer — model loading, live spread reconstruction from saved β, cached data fetching. |
+*LogisticsNow hackathon · team of five · 32 of 69 commits mine* — [repo](https://github.com/siddh-sh/LoRRI)
 
----
+XGBoost scores carrier delay risk; a PuLP linear program turns those scores into an actual volume allocation across carriers under cost and capacity constraints; an LLM writes the justification in plain English. The forecast on its own would be a number nobody can act on — the optimisation is what makes it a decision, and the explanation is what makes it trustable.
 
-## `03` &nbsp;·&nbsp; the toolkit
+I wrote the ML engine, the scoring and market-intelligence modules, the Flask application, the map UI, and the deployment config.
 
-**core**
+### SentimentIQ
 
-![Python](https://img.shields.io/badge/Python-0B1017?style=flat-square&logo=python&logoColor=5EEAD4)
-![NumPy](https://img.shields.io/badge/NumPy-0B1017?style=flat-square&logo=numpy&logoColor=5EEAD4)
-![Pandas](https://img.shields.io/badge/Pandas-0B1017?style=flat-square&logo=pandas&logoColor=5EEAD4)
-![Jupyter](https://img.shields.io/badge/Jupyter-0B1017?style=flat-square&logo=jupyter&logoColor=5EEAD4)
-![Git](https://img.shields.io/badge/Git-0B1017?style=flat-square&logo=git&logoColor=5EEAD4)
+*solo* — [repo](https://github.com/siddh-sh/Financial-sentiment)
 
-**modelling**
+353 financial headlines across seven large-cap tickers, each labelled by what the stock's next-day close *actually did* — not by a sentiment dictionary. TF-IDF into a linear SVM, served over FastAPI behind a charting frontend.
 
-![scikit-learn](https://img.shields.io/badge/scikit--learn-0B1017?style=flat-square&logo=scikitlearn&logoColor=5EEAD4)
-![XGBoost](https://img.shields.io/badge/XGBoost-0B1017?style=flat-square&logo=xgboost&logoColor=5EEAD4)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-0B1017?style=flat-square&logo=tensorflow&logoColor=5EEAD4)
-![Keras](https://img.shields.io/badge/Keras-0B1017?style=flat-square&logo=keras&logoColor=5EEAD4)
-![statsmodels](https://img.shields.io/badge/statsmodels-0B1017?style=flat-square&logo=python&logoColor=5EEAD4)
-![PuLP](https://img.shields.io/badge/PuLP_·_LP-0B1017?style=flat-square&logo=python&logoColor=5EEAD4)
+The model is deliberately boring. The labelling is the project: "does this headline sound positive" and "what happened the next session" are different questions, and only the second one is worth anything.
 
-**shipping it**
+### Pairs trading dashboard
 
-![FastAPI](https://img.shields.io/badge/FastAPI-0B1017?style=flat-square&logo=fastapi&logoColor=5EEAD4)
-![Flask](https://img.shields.io/badge/Flask-0B1017?style=flat-square&logo=flask&logoColor=5EEAD4)
-![Streamlit](https://img.shields.io/badge/Streamlit-0B1017?style=flat-square&logo=streamlit&logoColor=5EEAD4)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0B1017?style=flat-square&logo=postgresql&logoColor=5EEAD4)
-![Supabase](https://img.shields.io/badge/Supabase-0B1017?style=flat-square&logo=supabase&logoColor=5EEAD4)
-![Render](https://img.shields.io/badge/Render-0B1017?style=flat-square&logo=render&logoColor=5EEAD4)
+*team · I wrote the inference layer* — [repo](https://github.com/siddh-sh/ATSA-Project)
+
+ADF and Engle-Granger tests establish that KO and PEP are cointegrated; the fitted β, μ and σ are persisted so inference never has to refit. ARIMA, an LSTM, and a Random Forest each forecast the spread so their signals can be compared head to head.
+
+My part loads all four saved artefacts, reconstructs the live spread from the stored β, and caches aggressively enough that a session touches the network at most once every fifteen minutes.
+
+### EdWise
+
+*Smart India Hackathon · team* — [repo](https://github.com/siddh-sh/SIH_BitWise)
+
+I built the Curriculum Planner's resource recommendation module — the FastAPI controllers and routes, a difficulty-tiered catalogue spanning eight subject tracks, and the Jinja2 views and frontend on top of it.
 
 ---
 
-## `04` &nbsp;·&nbsp; how i think about the work
+### What's currently wrong with my own code
 
-- **Label from reality, not from vibes.** SentimentIQ scores headlines against realised next-day returns rather than a sentiment dictionary, because the question isn't "does this sound positive" — it's "what happened next."
-- **A model that can't be queried isn't finished.** Every project here ends in an API or a dashboard, not a final notebook cell.
-- **Say what's broken.** My repo READMEs list their own known issues — including a validation split of mine that leaks lookahead bias. I'd rather you read it from me than find it yourself.
-- **Optimization beats prediction, often.** FreightIQ's forecast is only useful because a linear program turns it into an actual allocation decision.
+Listed here because you'd find it anyway, and I'd rather you heard it from me:
+
+**SentimentIQ's validation is optimistic.** The train/test split is random, over data spanning June 2024 to November 2025. On time-ordered financial data that leaks future information into training — so any accuracy figure I quoted from it would be inflated. A chronological split is the fix, and the honest number goes up when I've run it.
+
+**`collect_data.py` in that repo doesn't run.** It imports `fetch_alpha_daily` from a module where that function no longer exists. The committed dataset and trained model work fine, but you couldn't regenerate the data from scratch.
+
+Neither is hard to fix. I'm flagging them because the first one is the failure mode that actually matters — a model that looks good because the evaluation is wrong is worse than one that looks bad honestly.
 
 ---
 
+### Now
 
-<div align="center">
+Chronological validation and a FinBERT baseline for SentimentIQ. Finishing the Streamlit layer on the pairs-trading dashboard.
 
-**open to data science and ML internships / new-grad roles**
+**siddhshah47929@gmail.com** · [linkedin.com/in/siddh-shah11](https://linkedin.com/in/siddh-shah11)
 
-[![LinkedIn](https://img.shields.io/badge/connect-0B1017?style=for-the-badge&logo=linkedin&logoColor=5EEAD4&labelColor=0B1017)](https://linkedin.com/in/siddh-shah11)
-[![Email](https://img.shields.io/badge/get_in_touch-0B1017?style=for-the-badge&logo=gmail&logoColor=5EEAD4&labelColor=0B1017)](mailto:siddhshah47929@gmail.com)
-
-</div>
+Open to data science and ML internships and new-grad roles.
 
 <!--
-  STATS CARDS: removed. github-readme-stats.vercel.app (the free shared instance)
-  was timing out, so the cards rendered as broken images. To bring them back,
-  deploy your own instance of github-readme-stats to Vercel (5 min, free) and
-  swap the hostname, then re-add:
-
-  ## `05`  ·  the numbers
-  ![Stats](https://YOUR-INSTANCE.vercel.app/api?username=siddh-sh&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0B1017&title_color=5EEAD4&icon_color=2DD4BF&text_color=8B98A5&ring_color=FBBF24)
-  ![Top languages](https://YOUR-INSTANCE.vercel.app/api/top-langs/?username=siddh-sh&layout=compact&langs_count=8&hide_border=true&bg_color=0B1017&title_color=5EEAD4&text_color=8B98A5)
-
-  banner.svg must stay at the root of this repo or the header image 404s.
+  Deliberately no shields.io badges, no stats cards, no emoji.
+  banner.svg and pipeline.svg must stay at the root of this repo or the images 404.
 -->
