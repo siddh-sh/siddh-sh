@@ -4,6 +4,7 @@
 
 <br/>
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0B1017?style=for-the-badge&logo=linkedin&logoColor=5EEAD4&labelColor=0B1017)](https://linkedin.com/in/siddh-shah11)
 [![Email](https://img.shields.io/badge/siddhshah47929@gmail.com-0B1017?style=for-the-badge&logo=gmail&logoColor=5EEAD4&labelColor=0B1017)](mailto:siddhshah47929@gmail.com)
 
 </div>
@@ -77,6 +78,7 @@ Final year of B.Tech Data Science at **NMIMS**. Currently deep in time-series fo
 
 **open to data science and ML internships / new-grad roles**
 
+[![LinkedIn](https://img.shields.io/badge/connect-0B1017?style=for-the-badge&logo=linkedin&logoColor=5EEAD4&labelColor=0B1017)](https://linkedin.com/in/siddh-shah11)
 [![Email](https://img.shields.io/badge/get_in_touch-0B1017?style=for-the-badge&logo=gmail&logoColor=5EEAD4&labelColor=0B1017)](mailto:siddhshah47929@gmail.com)
 
 </div>
@@ -90,13 +92,6 @@ Final year of B.Tech Data Science at **NMIMS**. Currently deep in time-series fo
   ## `05`  ·  the numbers
   ![Stats](https://YOUR-INSTANCE.vercel.app/api?username=siddh-sh&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0B1017&title_color=5EEAD4&icon_color=2DD4BF&text_color=8B98A5&ring_color=FBBF24)
   ![Top languages](https://YOUR-INSTANCE.vercel.app/api/top-langs/?username=siddh-sh&layout=compact&langs_count=8&hide_border=true&bg_color=0B1017&title_color=5EEAD4&text_color=8B98A5)
-
-  TO ADD YOUR LINKEDIN: paste this next to each Email badge, with your slug swapped in.
-
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0B1017?style=for-the-badge&logo=linkedin&logoColor=5EEAD4&labelColor=0B1017)](https://linkedin.com/in/YOUR-SLUG)
-
-  A location badge can go in the same row if you want one:
-  [![Location](https://img.shields.io/badge/Mumbai,_India-0B1017?style=for-the-badge&logo=googlemaps&logoColor=5EEAD4&labelColor=0B1017)](#)
 
   banner.svg must stay at the root of this repo or the header image 404s.
 -->
