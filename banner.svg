@@ -25,22 +25,6 @@
     <clipPath id="card"><rect x="0" y="0" width="1000" height="260" rx="14"/></clipPath>
   </defs>
 
-  <style>
-    /* Animations use fill-mode:both and never set a hidden default outside keyframes,
-       so a renderer that ignores CSS still shows the finished banner. */
-    .draw { stroke-dasharray: 1220; animation: draw 3.4s cubic-bezier(.22,.61,.36,1) both; }
-    @keyframes draw { from { stroke-dashoffset: 1220 } to { stroke-dashoffset: 0 } }
-    .fade { animation: fade .9s ease both; }
-    @keyframes fade { from { opacity: 0 } to { opacity: 1 } }
-    .d1 { animation-delay: .3s } .d2 { animation-delay: .7s }
-    .d3 { animation-delay: 1.1s } .d4 { animation-delay: 1.5s } .d5 { animation-delay: 2.5s }
-    .pulse { animation: pulse 2.4s ease-in-out infinite; }
-    @keyframes pulse { 0%,100% { r:4; opacity:1 } 50% { r:7; opacity:.45 } }
-    .halo { animation: halo 2.4s ease-out infinite; }
-    @keyframes halo { from { r:5; opacity:.55 } to { r:20; opacity:0 } }
-    text { font-family: 'SFMono-Regular', 'JetBrains Mono', 'Fira Code', Consolas, ui-monospace, 'DejaVu Sans Mono', monospace; }
-  </style>
-
   <g clip-path="url(#card)">
     <rect width="1000" height="260" fill="url(#bg)"/>
 
@@ -49,32 +33,34 @@
       <path d="M120 0V260M240 0V260M360 0V260M480 0V260M600 0V260M720 0V260M840 0V260"/>
     </g>
 
-    <rect class="fade d1" x="40" y="92.4" width="920" height="70.1" fill="url(#band)"/>
-    <line class="fade d1" x1="40" y1="92.4" x2="960" y2="92.4" stroke="#2DD4BF" stroke-opacity=".32" stroke-width="1" stroke-dasharray="3 5"/>
-    <line class="fade d1" x1="40" y1="162.5" x2="960" y2="162.5" stroke="#2DD4BF" stroke-opacity=".32" stroke-width="1" stroke-dasharray="3 5"/>
-    <line class="fade d1" x1="40" y1="127.4" x2="960" y2="127.4" stroke="#94A3B8" stroke-opacity=".4" stroke-width="1" stroke-dasharray="7 6"/>
-    <text class="fade d1" x="966" y="96"  fill="#2DD4BF" fill-opacity=".65" font-size="9" text-anchor="end">+1s</text>
-    <text class="fade d1" x="966" y="131" fill="#94A3B8" fill-opacity=".65" font-size="9" text-anchor="end">mean</text>
-    <text class="fade d1" x="966" y="166" fill="#2DD4BF" fill-opacity=".65" font-size="9" text-anchor="end">-1s</text>
+    <rect x="40" y="92.4" width="920" height="70.1" fill="url(#band)"/>
+    <line x1="40" y1="92.4" x2="960" y2="92.4" stroke="#2DD4BF" stroke-opacity=".32" stroke-width="1" stroke-dasharray="3 5"/>
+    <line x1="40" y1="162.5" x2="960" y2="162.5" stroke="#2DD4BF" stroke-opacity=".32" stroke-width="1" stroke-dasharray="3 5"/>
+    <line x1="40" y1="127.4" x2="960" y2="127.4" stroke="#94A3B8" stroke-opacity=".4" stroke-width="1" stroke-dasharray="7 6"/>
+    <text x="966" y="96"  fill="#2DD4BF" fill-opacity=".65" font-family="Consolas, monospace" font-size="9" text-anchor="end">+1s</text>
+    <text x="966" y="131" fill="#94A3B8" fill-opacity=".65" font-family="Consolas, monospace" font-size="9" text-anchor="end">mean</text>
+    <text x="966" y="166" fill="#2DD4BF" fill-opacity=".65" font-family="Consolas, monospace" font-size="9" text-anchor="end">-1s</text>
 
-    <path class="draw" d="M 40.0,176.5 L 45.4,175.6 L 50.9,178.2 L 56.3,179.0 L 61.8,179.5 L 67.2,179.8 L 72.7,181.7 L 78.1,183.5 L 83.6,183.3 L 89.0,183.1 L 94.4,181.8 L 99.9,175.3 L 105.3,166.3 L 110.8,160.1 L 116.2,149.2 L 121.7,143.3 L 127.1,142.0 L 132.5,143.4 L 138.0,143.7 L 143.4,149.9 L 148.9,155.9 L 154.3,159.8 L 159.8,160.1 L 165.2,158.9 L 170.7,155.4 L 176.1,150.9 L 181.5,150.7 L 187.0,149.5 L 192.4,153.5 L 197.9,160.4 L 203.3,171.0 L 208.8,176.6 L 214.2,185.5 L 219.6,190.0 L 225.1,185.8 L 230.5,178.4 L 236.0,169.3 L 241.4,162.1 L 246.9,156.5 L 252.3,157.6 L 257.8,158.7 L 263.2,161.0 L 268.6,159.6 L 274.1,160.0 L 279.5,160.7 L 285.0,163.1 L 290.4,161.7 L 295.9,161.8 L 301.3,157.9 L 306.7,155.5 L 312.2,149.0 L 317.6,148.8 L 323.1,145.0 L 328.5,143.4 L 334.0,138.8 L 339.4,135.2 L 344.9,130.1 L 350.3,129.5 L 355.7,126.8 L 361.2,126.2 L 366.6,123.2 L 372.1,121.6 L 377.5,116.8 L 383.0,112.9 L 388.4,109.7 L 393.8,110.1 L 399.3,109.2 L 404.7,111.1 L 410.2,116.6 L 415.6,123.4 L 421.1,128.9 L 426.5,130.9 L 432.0,129.0 L 437.4,122.2 L 442.8,112.9 L 448.3,103.8 L 453.7,98.5 L 459.2,94.0 L 464.6,87.9 L 470.1,84.9 L 475.5,85.4 L 480.9,81.6 L 486.4,79.3 L 491.8,79.0 L 497.3,75.8 L 502.7,73.9 L 508.2,71.0 L 513.6,64.5 L 519.1,60.2 L 524.5,56.6 L 529.9,50.0 L 535.4,51.8 L 540.8,58.2 L 546.3,63.7 L 551.7,68.0 L 557.2,70.7 L 562.6,70.9 L 568.0,67.5 L 573.5,67.1 L 578.9,67.6 L 584.4,67.0 L 589.8,67.2 L 595.3,75.1 L 600.7,83.0 L 606.2,91.7 L 611.6,101.4 L 617.0,106.0 L 622.5,108.5 L 627.9,108.7 L 633.4,107.9 L 638.8,108.8 L 644.3,119.1 L 649.7,124.4 L 655.1,123.9 L 660.6,122.6 L 666.0,123.1 L 671.5,118.9 L 676.9,116.3 L 682.4,113.5 L 687.8,111.7 L 693.3,107.5 L 698.7,98.8 L 704.1,91.3 L 709.6,85.8 L 715.0,83.7 L 720.5,83.1 L 725.9,84.6 L 731.4,82.4 L 736.8,83.2 L 742.2,81.6 L 747.7,83.3 L 753.1,88.4 L 758.6,98.2 L 764.0,110.3 L 769.5,121.0 L 774.9,127.6 L 780.4,130.2 L 785.8,130.9 L 791.2,131.1 L 796.7,132.4 L 802.1,131.9 L 807.6,131.1 L 813.0,131.8 L 818.5,132.2 L 823.9,136.1 L 829.3,137.0 L 834.8,136.4 L 840.2,135.1 L 845.7,134.5 L 851.1,133.6 L 856.6,136.3 L 862.0,141.8 L 867.5,141.2 L 872.9,139.0 L 878.3,135.8 L 883.8,139.0 L 889.2,139.2 L 894.7,144.2 L 900.1,153.5 L 905.6,159.8 L 911.0,163.9 L 916.4,162.6 L 921.9,159.2 L 927.3,150.7 L 932.8,143.5 L 938.2,138.0 L 943.7,141.6 L 949.1,151.4 L 954.6,157.7 L 960.0,166.7" fill="none" stroke="url(#line)" stroke-width="2.1"
-          stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+    <path d="M 40.0,176.5 L 45.4,175.6 L 50.9,178.2 L 56.3,179.0 L 61.8,179.5 L 67.2,179.8 L 72.7,181.7 L 78.1,183.5 L 83.6,183.3 L 89.0,183.1 L 94.4,181.8 L 99.9,175.3 L 105.3,166.3 L 110.8,160.1 L 116.2,149.2 L 121.7,143.3 L 127.1,142.0 L 132.5,143.4 L 138.0,143.7 L 143.4,149.9 L 148.9,155.9 L 154.3,159.8 L 159.8,160.1 L 165.2,158.9 L 170.7,155.4 L 176.1,150.9 L 181.5,150.7 L 187.0,149.5 L 192.4,153.5 L 197.9,160.4 L 203.3,171.0 L 208.8,176.6 L 214.2,185.5 L 219.6,190.0 L 225.1,185.8 L 230.5,178.4 L 236.0,169.3 L 241.4,162.1 L 246.9,156.5 L 252.3,157.6 L 257.8,158.7 L 263.2,161.0 L 268.6,159.6 L 274.1,160.0 L 279.5,160.7 L 285.0,163.1 L 290.4,161.7 L 295.9,161.8 L 301.3,157.9 L 306.7,155.5 L 312.2,149.0 L 317.6,148.8 L 323.1,145.0 L 328.5,143.4 L 334.0,138.8 L 339.4,135.2 L 344.9,130.1 L 350.3,129.5 L 355.7,126.8 L 361.2,126.2 L 366.6,123.2 L 372.1,121.6 L 377.5,116.8 L 383.0,112.9 L 388.4,109.7 L 393.8,110.1 L 399.3,109.2 L 404.7,111.1 L 410.2,116.6 L 415.6,123.4 L 421.1,128.9 L 426.5,130.9 L 432.0,129.0 L 437.4,122.2 L 442.8,112.9 L 448.3,103.8 L 453.7,98.5 L 459.2,94.0 L 464.6,87.9 L 470.1,84.9 L 475.5,85.4 L 480.9,81.6 L 486.4,79.3 L 491.8,79.0 L 497.3,75.8 L 502.7,73.9 L 508.2,71.0 L 513.6,64.5 L 519.1,60.2 L 524.5,56.6 L 529.9,50.0 L 535.4,51.8 L 540.8,58.2 L 546.3,63.7 L 551.7,68.0 L 557.2,70.7 L 562.6,70.9 L 568.0,67.5 L 573.5,67.1 L 578.9,67.6 L 584.4,67.0 L 589.8,67.2 L 595.3,75.1 L 600.7,83.0 L 606.2,91.7 L 611.6,101.4 L 617.0,106.0 L 622.5,108.5 L 627.9,108.7 L 633.4,107.9 L 638.8,108.8 L 644.3,119.1 L 649.7,124.4 L 655.1,123.9 L 660.6,122.6 L 666.0,123.1 L 671.5,118.9 L 676.9,116.3 L 682.4,113.5 L 687.8,111.7 L 693.3,107.5 L 698.7,98.8 L 704.1,91.3 L 709.6,85.8 L 715.0,83.7 L 720.5,83.1 L 725.9,84.6 L 731.4,82.4 L 736.8,83.2 L 742.2,81.6 L 747.7,83.3 L 753.1,88.4 L 758.6,98.2 L 764.0,110.3 L 769.5,121.0 L 774.9,127.6 L 780.4,130.2 L 785.8,130.9 L 791.2,131.1 L 796.7,132.4 L 802.1,131.9 L 807.6,131.1 L 813.0,131.8 L 818.5,132.2 L 823.9,136.1 L 829.3,137.0 L 834.8,136.4 L 840.2,135.1 L 845.7,134.5 L 851.1,133.6 L 856.6,136.3 L 862.0,141.8 L 867.5,141.2 L 872.9,139.0 L 878.3,135.8 L 883.8,139.0 L 889.2,139.2 L 894.7,144.2 L 900.1,153.5 L 905.6,159.8 L 911.0,163.9 L 916.4,162.6 L 921.9,159.2 L 927.3,150.7 L 932.8,143.5 L 938.2,138.0 L 943.7,141.6 L 949.1,151.4 L 954.6,157.7 L 960.0,166.7" fill="none" stroke="url(#line)" stroke-width="2.1"
+          stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"
+          stroke-dasharray="1220">
+      <animate attributeName="stroke-dashoffset" from="1220" to="0" dur="3.2s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.22 0.61 0.36 1" keyTimes="0;1" values="1220;0"/>
+    </path>
 
-    <g class="fade d5">
-      <circle class="halo" cx="960" cy="166.7" r="5" fill="none" stroke="#FBBF24" stroke-width="1.5"/>
-      <circle class="pulse" cx="960" cy="166.7" r="4" fill="#FBBF24"/>
-    </g>
+    <circle cx="960" cy="166.7" r="5" fill="none" stroke="#FBBF24" stroke-width="1.5" opacity="0">
+      <animate attributeName="r" from="5" to="20" dur="2.4s" begin="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" from="0.55" to="0" dur="2.4s" begin="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="960" cy="166.7" r="4" fill="#FBBF24"/>
 
-    <text class="fade d2" x="40" y="62" fill="#E6EDF3" font-size="34" font-weight="700" letter-spacing="1.5">SIDDH SHAH</text>
-    <path class="fade d3" d="M40 76H300" stroke="url(#rule)" stroke-width="2"/>
-    <text class="fade d3" x="40" y="99" fill="#5EEAD4" font-size="12.5" letter-spacing="2.4">DATA SCIENCE  ·  APPLIED ML</text>
-    <text class="fade d4" x="40" y="238" fill="#8B98A5" font-size="11" letter-spacing=".4">final-year B.Tech Data Science, NMIMS  ·  models that reach production, not just notebooks</text>
+    <text x="40" y="62" fill="#E6EDF3" font-family="Consolas, 'DejaVu Sans Mono', monospace" font-size="34" font-weight="700" letter-spacing="1.5">SIDDH SHAH</text>
+    <path d="M40 76H300" stroke="url(#rule)" stroke-width="2"/>
+    <text x="40" y="99" fill="#5EEAD4" font-family="Consolas, 'DejaVu Sans Mono', monospace" font-size="12.5" letter-spacing="2.4">DATA SCIENCE  ·  APPLIED ML</text>
+    <text x="40" y="238" fill="#8B98A5" font-family="Consolas, 'DejaVu Sans Mono', monospace" font-size="11" letter-spacing=".4">final-year B.Tech Data Science, NMIMS  ·  models that reach production, not just notebooks</text>
 
-    <g class="fade d4">
-      <rect x="856" y="24" width="120" height="22" rx="11" fill="#2DD4BF" fill-opacity=".09" stroke="#2DD4BF" stroke-opacity=".28"/>
-      <circle cx="872" cy="35" r="3" fill="#4ADE80"/>
-      <text x="882" y="38.5" fill="#7FE7DA" font-size="9.5" letter-spacing="1.1">MEAN-REVERTING</text>
-    </g>
+    <rect x="856" y="24" width="120" height="22" rx="11" fill="#2DD4BF" fill-opacity=".09" stroke="#2DD4BF" stroke-opacity=".28"/>
+    <circle cx="872" cy="35" r="3" fill="#4ADE80"/>
+    <text x="882" y="38.5" fill="#7FE7DA" font-family="Consolas, monospace" font-size="9.5" letter-spacing="1.1">MEAN-REVERTING</text>
 
     <rect x="0.5" y="0.5" width="999" height="259" rx="14" fill="none" stroke="#2DD4BF" stroke-opacity=".16"/>
   </g>
